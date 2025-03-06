@@ -149,6 +149,7 @@ func getWiredInterfacesWindows() []string {
 
 	var interfaces []string
 	lines := strings.Split(out.String(), "\n")
+	fmt.Println(lines)
 	for _, line := range lines {
 		// Ищем "Connected" и "Ethernet"
 		if (strings.Contains(line, "Connected") || strings.Contains(line, "Подключен")) && strings.Contains(line, "Ethernet") {
